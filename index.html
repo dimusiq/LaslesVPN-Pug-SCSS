@@ -9,35 +9,30 @@
     <title>project</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> <!--можно без враппера-->
         <header class="header">
-                    <a href="#" class="header__logo"><img src="/img/Logo.png" alt=""></a>
-                    <div class="header__menu menu">
-                        <div class="menu__icon icon-menu">
-                            <span></span>
+                    <a href="#" class="header__logo"><img src="img/Logo.png" alt=""></a>
+                    <nav class="menu-body">
+                        <ul class="menu__list">
+                            <li><a href="#" class="menu__link">About</a></li>
+                            <li><a href="#" class="menu__link">Features</a></li>
+                            <li><a href="#" class="menu__link">Pricing</a></li>
+                            <li><a href="#" class="menu__link">Testimonials</a></li>
+                            <li><a href="#" class="menu__link">Help</a></li>
+                        </ul>
+                        <!--можно застилить span-->
+                        <div class="buttons">
+                            <a href="#" class="button">Sign Ip</a>
+                            <a href="#" class="button button__primary">Sign Up</a>
                         </div>
-                        <nav class="menu-body">
-                            <ul class="menu__list">
-                                <li><a href="#" class="menu__link">About</a></li>
-                                <li><a href="#" class="menu__link">Features</a></li>
-                                <li><a href="#" class="menu__link">Pricing</a></li>
-                                <li><a href="#" class="menu__link">Testimonials</a></li>
-                                <li><a href="#" class="menu__link">Help</a></li>
-                            </ul>
-                            <div class="menu__text">
-                                <span>Sign In</span>
-                            </div>
-                            <div class="button">
-                                <a href="" class="button-red">Sign Up</a>
-                            </div>
-                        </nav>
-                    </div>
+                    </nav>
         </header>
+        <!--добавить main-->
         <section class="statistic-content__container">
             <div class="statistic"> 
                 <div class="statistic__item">
                     <div class="statistic__image">
-                        <img src="./img/Human.svg" alt="">
+                        <img src="img/Human.svg" alt="">
                     </div>
                     <div class="statistic__content">
                         <span class="statistic__num">90+</span>
@@ -69,7 +64,7 @@
             </div>
             <div class="info">
                 <div class="info__image">
-                    <img src="./img/user.png" alt="">
+                    <img src="img/user.png" alt="user">
                 </div>
                 <div class="info__content">
                     <h2 class="h2 info__title">We Provide Many Features You Can Use</h2>
@@ -86,21 +81,20 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="left-footer">
-                    <div class="footer-logo"></div>
                     <a href="#" class="footer-logo logo"> 
-                        <img src="/img/Logo.png" alt=""></a>
-                        <div class="left-footer__text">
-                        <span>LaslesVPN is a private virtual network that has unique features and has high security.</span>
-                    </div>
+                        <img src="img/Logo.png" alt=""></a>
+                        <p class="left-footer__text">
+                            LaslesVPN is a private virtual network that has unique features and has high security.
+                        </p>
                     <div class="footer-social social">
                         <a href="" class="social__link">
-                            <img src="/img/Facebook.png" alt="">
+                            <img src="img/facebook.svg" alt="">
                         </a>
                         <a href="" class="social__link">
-                            <img src="/img/Twitter.png" alt="">
+                            <img src="img/Twitter.png" alt="">
                         </a>
                         <a href="" class="social__link">
-                            <img src="/img/Instagram.png" alt="">
+                            <img src="img/Instagram.png" alt="">
                         </a>
                         </div>
                     <div class="footer-copyrights">
@@ -110,34 +104,40 @@
                 
                 <div class="right-footer">
                     <div class="menu-footer__column">
-                        <b>Product</b>
-                            <ul>
-                                <li><a href="">Download</a></li>
-                                <li><a href="">Pricing</a></li>
-                                <li><a href="">Locations</a></li>
-                                <li><a href="">Server</a></li>
-                                <li><a href="">Countries</a></li>
-                                <li><a href="">Blog</a></li>
-                                </ul>
+                        <span class="footer__title">
+                            Product
+                        </span>
+                        <ul>
+                            <li><a href="">Download</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Locations</a></li>
+                            <li><a href="">Server</a></li>
+                            <li><a href="">Countries</a></li>
+                            <li><a href="">Blog</a></li>
+                        </ul>
                     </div>
                     <div class="menu-footer__column">
-                        <b>Engage</b>
-                            <ul>
-                                <li><a href="">LaslesVPN ? </a></li>
-                                <li><a href="">FAQ</a></li>
-                                <li><a href="">Tutorials</a></li>
-                                <li><a href="">About Us</a></li>
-                                <li><a href="">Privacy Policy</a></li>
-                                <li><a href="">Terms of Service</a></li>
-                                </ul>
+                        <span class="footer__title">
+                            Engage
+                        </span>
+                        <ul>
+                            <li><a href="">LaslesVPN ? </a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Tutorials</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
                     </div>
                     <div class="menu-footer__column">
-                        <b>Earn Money</b>
-                            <ul>
-                                <li><a href="">Affiliate</a></li>
-                                <li><a href="">Become Partner</a></li>
-                                </ul>
-                            </div>
+                        <span class="footer__title">
+                            Earn Money
+                        </span>
+                        <ul>
+                            <li><a href="">Affiliate</a></li>
+                            <li><a href="">Become Partner</a></li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </footer>
