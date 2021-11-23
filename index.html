@@ -3,10 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <title>project</title>
 </head>
 <body>
-<h1>text test</h1>
+    <div class="wrapper">
+        <header class="header">
+                    <a href="#" class="header__logo"><img src="/img/Logo.png" alt=""></a>
+                    <div class="header__menu menu">
+                        <div class="menu__icon icon-menu">
+                            <span></span>
+                        </div>
+                        <nav class="menu-body">
+                            <ul class="menu__list">
+                                <li><a href="#" class="menu__link">About</a></li>
+                                <li><a href="#" class="menu__link">Features</a></li>
+                                <li><a href="#" class="menu__link">Pricing</a></li>
+                                <li><a href="#" class="menu__link">Testimonials</a></li>
+                                <li><a href="#" class="menu__link">Help</a></li>
+                            </ul>
+                            <div class="menu__text">
+                                <span>Sign In</span>
+                            </div>
+                            <div class="button">
+                                <a href="" class="button-red">Sign Up</a>
+                            </div>
+                        </nav>
+                    </div>
+        </header>
+        <section class="statistic-content__container">
+            <div class="statistic"> 
+                <div class="statistic__item">
+                    <div class="statistic__image">
+                        <img src="./img/Human.svg" alt="">
+                    </div>
+                    <div class="statistic__content">
+                        <span class="statistic__num">90+</span>
+                        <span class="statistic__name">Users</span>
+                    </div>
+                </div>
+                <div class="statistic__item">
+                    <div class="statistic__image">
+                        <svg viewBox="0 0 24 25" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9.54932C19 8.63006 18.8189 7.71981 18.4672 6.87053C18.1154 6.02125 17.5998 5.24958 16.9497 4.59957C16.2997 3.94956 15.5281 3.43394 14.6788 3.08216C13.8295 2.73038 12.9193 2.54932 12 2.54932C11.0807 2.54932 10.1705 2.73038 9.32122 3.08216C8.47194 3.43394 7.70026 3.94956 7.05025 4.59957C6.40024 5.24958 5.88463 6.02125 5.53284 6.87053C5.18106 7.71981 5 8.63006 5 9.54932C5 10.9363 5.41 12.2263 6.105 13.3143H6.097C8.457 17.0093 12 22.5493 12 22.5493L17.903 13.3143H17.896C18.6164 12.1907 18.9995 10.8841 19 9.54932ZM12 12.5493C11.2044 12.5493 10.4413 12.2332 9.87868 11.6706C9.31607 11.108 9 10.345 9 9.54932C9 8.75367 9.31607 7.99061 9.87868 7.428C10.4413 6.86539 11.2044 6.54932 12 6.54932C12.7956 6.54932 13.5587 6.86539 14.1213 7.428C14.6839 7.99061 15 8.75367 15 9.54932C15 10.345 14.6839 11.108 14.1213 11.6706C13.5587 12.2332 12.7956 12.5493 12 12.5493Z"/>
+                        </svg>
+                    </div>
+                    <div class="statistic__content">
+                        <span class="statistic__num">30+</span>
+                        <span class="statistic__name">Locations</span>
+                    </div>
+                </div>
+                <div class="statistic__item">
+                    <div class="statistic__image">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="CurrentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5 3.54932H4.5C3.96957 3.54932 3.46086 3.76003 3.08579 4.1351C2.71071 4.51018 2.5 5.01888 2.5 5.54932V9.54932C2.5 10.0797 2.71071 10.5885 3.08579 10.9635C3.46086 11.3386 3.96957 11.5493 4.5 11.5493H20.5C21.0304 11.5493 21.5391 11.3386 21.9142 10.9635C22.2893 10.5885 22.5 10.0797 22.5 9.54932V5.54932C22.5 5.01888 22.2893 4.51018 21.9142 4.1351C21.5391 3.76003 21.0304 3.54932 20.5 3.54932ZM15.5 7.54932C15.5 8.1016 15.0523 8.54932 14.5 8.54932C13.9477 8.54932 13.5 8.1016 13.5 7.54932C13.5 6.99703 13.9477 6.54932 14.5 6.54932C15.0523 6.54932 15.5 6.99703 15.5 7.54932ZM19.5 7.54932C19.5 8.1016 19.0523 8.54932 18.5 8.54932C17.9477 8.54932 17.5 8.1016 17.5 7.54932C17.5 6.99703 17.9477 6.54932 18.5 6.54932C19.0523 6.54932 19.5 6.99703 19.5 7.54932ZM20.5 13.5493H4.5C3.96957 13.5493 3.46086 13.76 3.08579 14.1351C2.71071 14.5102 2.5 15.0189 2.5 15.5493V19.5493C2.5 20.0798 2.71071 20.5885 3.08579 20.9635C3.46086 21.3386 3.96957 21.5493 4.5 21.5493H20.5C21.0304 21.5493 21.5391 21.3386 21.9142 20.9635C22.2893 20.5885 22.5 20.0798 22.5 19.5493V15.5493C22.5 15.0189 22.2893 14.5102 21.9142 14.1351C21.5391 13.76 21.0304 13.5493 20.5 13.5493ZM15.5 17.5493C15.5 18.1016 15.0523 18.5493 14.5 18.5493C13.9477 18.5493 13.5 18.1016 13.5 17.5493C13.5 16.997 13.9477 16.5493 14.5 16.5493C15.0523 16.5493 15.5 16.997 15.5 17.5493ZM19.5 17.5493C19.5 18.1016 19.0523 18.5493 18.5 18.5493C17.9477 18.5493 17.5 18.1016 17.5 17.5493C17.5 16.997 17.9477 16.5493 18.5 16.5493C19.0523 16.5493 19.5 16.997 19.5 17.5493Z"/>
+                        </svg>
+                    </div>
+                    <div class="statistic__content">
+                        <span class="statistic__num">50+</span>
+                        <span class="statistic__name">Servers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info__image">
+                    <img src="./img/user.png" alt="">
+                </div>
+                <div class="info__content">
+                    <h2 class="h2 info__title">We Provide Many Features You Can Use</h2>
+                    <p class="text info__text">You can explore the features that we provide with fun and have their own functions each feature.</p>
+                    <ul class="info__list">
+                        <li class="info__list-item">Powerfull online protection.</li>
+                        <li class="info__list-item">Internet without borders.</li>
+                        <li class="info__list-item">Supercharged VPN</li>
+                        <li class="info__list-item">No specific time limits.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="left-footer">
+                    <div class="footer-logo"></div>
+                    <a href="#" class="footer-logo logo"> 
+                        <img src="/img/Logo.png" alt=""></a>
+                        <div class="left-footer__text">
+                        <span>LaslesVPN is a private virtual network that has unique features and has high security.</span>
+                    </div>
+                    <div class="footer-social social">
+                        <a href="" class="social__link">
+                            <img src="/img/Facebook.png" alt="">
+                        </a>
+                        <a href="" class="social__link">
+                            <img src="/img/Twitter.png" alt="">
+                        </a>
+                        <a href="" class="social__link">
+                            <img src="/img/Instagram.png" alt="">
+                        </a>
+                        </div>
+                    <div class="footer-copyrights">
+                            <span class="footer-copyrights__text">©2020LaslesVPN</span>
+                    </div>
+                </div>
+                
+                <div class="right-footer">
+                    <div class="menu-footer__column">
+                        <b>Product</b>
+                            <ul>
+                                <li><a href="">Download</a></li>
+                                <li><a href="">Pricing</a></li>
+                                <li><a href="">Locations</a></li>
+                                <li><a href="">Server</a></li>
+                                <li><a href="">Countries</a></li>
+                                <li><a href="">Blog</a></li>
+                                </ul>
+                    </div>
+                    <div class="menu-footer__column">
+                        <b>Engage</b>
+                            <ul>
+                                <li><a href="">LaslesVPN ? </a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Tutorials</a></li>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms of Service</a></li>
+                                </ul>
+                    </div>
+                    <div class="menu-footer__column">
+                        <b>Earn Money</b>
+                            <ul>
+                                <li><a href="">Affiliate</a></li>
+                                <li><a href="">Become Partner</a></li>
+                                </ul>
+                            </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
