@@ -1,0 +1,43 @@
+/*map__block*/
+
+.map {
+    max-width: 1140px;
+    &__container {
+        text-align: center;
+        }
+        &__title{
+        font-size: 35px;
+        line-height: 50px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        }
+        &__subtitle{
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        margin-bottom: 155px;
+        }
+        &__image{
+            img{
+                width: 1060px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &__logos {
+                max-width: 1140px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                }
+/*проблема с адаптивом картинок*/
+                img {
+                    width: 160px;
+                    height: 60px;
+                }
+            }
+        }

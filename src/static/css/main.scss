@@ -1,0 +1,18 @@
+@import "import/reset";
+
+/*global*/
+@import "import/_fonts";
+@import "import/_variables";
+@import "import/_base";
+@import "import/_breakpoints";
+
+/*components*/
+@import "import/header";
+@import "import/introduction";
+@import "import/statistics";
+@import "import/information-section";
+@import "import/columns";
+@import "import/map-section";
+@import "import/slider";
+@import "import/banner";
+@import "import/footer";

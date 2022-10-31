@@ -1,0 +1,54 @@
+include mixins.pug
+
+.footer
+    .footer__container 
+        .footer__left 
+            .footer__logo
+                img( src="./img/svg/Vector.svg" alt="logo").footer__logo.logo
+                span.footer__name LaslesVPN
+            span.footer__text LaslesVPN is a private virtual network that has unique features and has high security.
+            .footer__social
+                a(href="https://www.facebook.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
+                    img( src="./img/svg/facebook.svg" alt="facebook")
+                a(href="https://www.twitter.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
+                    img( src="./img/svg/twitter.svg" alt="facebook")
+                a(href="https://www.instagram.com"  target="_blank" rel="noopener noreferrer" ).footer__link--social
+                    img( src="./img/svg/instagram.svg" alt="facebook")
+            .footer__copyrights
+                span ©2020LaslesVPN
+        .footer__right
+            nav.footer__column(data-spollers ="764,max")
+                a(tabindex="-1" name='accordion-button' type='button' data-spoller class="footer__nav-spoller") Product
+                +footer__list( [
+                {href: '#', text: 'Download'},
+                {href: '#', text: 'Pricing'},
+                {href: '#', text: 'Locations'},
+                {href: '#', text: 'Server'},
+                {href: '#', text: 'Countries'},
+                {href: '#', text: 'Blog'}
+                ] )
+            nav.footer__column(data-spollers ="764,max")
+                a(tabindex="-1" name='accordion-buttons' type='button' data-spoller class="footer__nav-spoller") Engage
+                +footer__list( [ 
+                {href: '#', text: 'LaslesVPN ?'},
+                {href: '#', text: 'FAQ'},
+                {href: '#', text: 'Tutorials'},
+                {href: '#', text: 'About Us'},
+                {href: '#', text: 'Privacy Policy'},
+                {href: '#', text: 'Terms of Service'}
+                ] )
+            nav.footer__column(data-spollers ="764,max")
+                a(tabindex="-1" name='accordion-buttons' type='button' data-spoller class="footer__nav-spoller") Earn Money
+                +footer__list( [ 
+                {href: '#', text: 'Affiliate'},
+                {href: '#', text: 'Become Partner'}
+                ] )
+
+
+
+
+script(src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous")
+script(src="libs/selectric/jquery.selectric.min.js")
+script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+script(src="js/common.js")
+

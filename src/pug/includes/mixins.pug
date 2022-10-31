@@ -1,0 +1,39 @@
+mixin header__list ( header__list )
+    ul.header__list
+        each header__link in header__list 
+            li.header__link
+                a(href=header__link.href)=header__link.text
+
+
+mixin statistic(svg, num, name)
+    - var svgName = svg;
+    .statistics__item
+        .statistics__image
+            img( src="img/svg/" + svgName + ".svg" alt="" + svgName)
+        span.statistics__num #{num}
+        span.statistics__name #{name}
+
+mixin footer__list(footer__list)
+    ul.footer__list
+        each footer__link in footer__list 
+            li.footer__link
+                a(href=footer__link.href)=footer__link.text
+
+
+mixin column(svg, title, ...items)
+    - var svgName = svg;
+    .column
+        .column__image 
+            img(src="img/svg/" + svgName + ".svg" alt="" + svgName)
+        .column__title 
+                h3.span #{title}
+        ul.column__list
+            each column__item in items
+                li.column__item= column__item
+        block
+
+mixin column__footer (price, btn)
+    .column__footer  
+        .column__footer__price #{price}
+        a(href="#") 
+            span.column__footer-btn #{btn}

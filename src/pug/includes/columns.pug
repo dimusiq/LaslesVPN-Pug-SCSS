@@ -1,0 +1,38 @@
+include mixins.pug
+
+.columns
+    .columns__title
+        h3.span Choose Your Plan
+    .columns__subtitle
+        span Let's choose the package that is best for you and explore it happily and cheerfully.
+    .columns__container
+        +column(
+            "Free", 
+            "Free Plan",
+            "Unlimited Bandwitch",
+            "Encrypted Connection",
+            "No Traffic Logs",
+            "Works on All Devices"
+            )
+            +column__footer("Free", "Select")
+        +column(
+            "Standard", 
+            "Standard Plan",
+            "Unlimited Bandwitch",
+            "Encrypted Connection",
+            "Yes Traffic Logs",
+            "Works on All Devices",
+            "Connect Anyware"
+            )
+            +column__footer("$9 / mo", "Select")
+        +column(
+            "Premium", 
+            "Premium Plan",
+            "Unlimited Bandwitch",
+            "Encrypted Connection",
+            "Yes Traffic Logs",
+            "Works on All Devices",
+            "Connect Anyware",
+            "Get New Features"
+            )
+            +column__footer("$12 / mo", "Select")

@@ -1,0 +1,106 @@
+/*stastistic_block*/
+
+.statistics {
+    background-color: $background-primary;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 37px 90px;
+    margin-bottom: 95px;
+    max-width: 1140px;
+    @include desktop {
+        padding: 30px 15px;
+    }
+    @include tablet {
+        align-items: flex-start;
+        flex-direction: column;
+        box-shadow: none;
+    }
+    &__item {
+        flex-grow: 1;
+        flex-basis: 33.33%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        @include desktop {
+            justify-content: center;
+        }
+        @include tablet {
+            flex-basis: 100%;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        &:not(:last-child) {
+            margin-right: 113px;
+            border-right: 2px solid $grey-200-color;
+            @include desktop {
+                margin-right: 0;
+            }
+            @include tablet {
+                border: none;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__image {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: $grey-300-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 36px;
+        color: $red-color;
+        flex-basis: 55px;
+        flex-shrink: 0;
+    }
+    &__content {
+        flex-grow: 1;
+        @include desktop {
+            flex-grow: 0;
+        }
+    }
+    
+    &__image {
+        img {
+            width: 24px;
+            height: auto;
+            margin-bottom: 0;
+        }
+        svg {
+            width: 24px;
+            height: auto;
+        }
+        @include tablet-large {
+            width: 40px;
+            height: 40px;
+            flex-basis: 40px;
+            margin-right: 20px;
+        }
+    }
+    &__num {
+        font-weight: 700;
+        color: $font-dark-color;
+        font-size: 25px;
+        display: block;
+        @include tablet-large {
+            font-size: 20px;
+        }
+    }
+    &__name {
+        color: $text-color;
+        font-size: 20px;
+        display: block;
+
+        @include tablet-large {
+            font-size: 16px;
+        }
+    }
+}
