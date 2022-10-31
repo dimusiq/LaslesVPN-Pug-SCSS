@@ -54,6 +54,7 @@
 		background-color: $red-color;
 		border-radius: 10px;
 		margin-bottom: 150px;
+		cursor: pointer;
 		&:hover {
 			box-shadow: 0px 15px 20px rgba(245, 56, 56, 0.35);
 			transition-delay: 0.25s;
