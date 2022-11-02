@@ -1,79 +1,87 @@
-"use strict"
+'use strict';
 
 const swiper = new Swiper('.swiper', {
+	// Optional parameters
 
-    // Optional parameters
+	loop: true,
 
-    loop: true,
+	// If we need pagination
 
-    // If we need pagination
+	pagination: {
+		el: '.swiper-pagination-custom',
+		clickable: true,
+	},
 
-    pagination: {
-        el: '.swiper-pagination-custom',
-        clickable: true,
-    },
+	// Navigation arrows
 
-    // Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next-custom',
+		prevEl: '.swiper-button-prev-custom',
+	},
 
-    navigation: {
-        nextEl: '.swiper-button-next-custom',
-        prevEl: '.swiper-button-prev-custom'
-    },
+	// And if we need scrollbar
+	// scrollbar: {
+	//     el: '.swiper-scrollbar',
+	// },
 
-    // And if we need scrollbar
-    // scrollbar: {
-    //     el: '.swiper-scrollbar',
-    // },
+	slidesPerView: 2.7,
+	spaceBetween: 50,
+	slidesPerGroup: 1,
 
-    slidesPerView: 2.7,
-    spaceBetween: 50,
-    slidesPerGroup: 1,
-
-    mousewheel: {
-        sensitivity: 1,
-    },
-	  // Responsive breakpoints
-		breakpoints: {
+	mousewheel: {
+		sensitivity: 1,
+	},
+	// Responsive breakpoints
+	breakpoints: {
 		// when window width is >= 335px
 		335: {
 			slidesPerView: 1.4,
-			spaceBetween: 18
+			spaceBetween: 18,
 		},
 		// when window width is >= 480px
 		500: {
 			slidesPerView: 2.7,
-			spaceBetween: 60
+			spaceBetween: 60,
 		},
-		}
-	});
+	},
+});
 
 // burger
 
 const headerTablet = document.querySelector('.header__tablet');
 const headerBody = document.querySelector('.header__body');
 if (headerTablet) {
-	headerTablet.addEventListener("click", function () {
+	headerTablet.addEventListener('click', function () {
 		document.body.classList.toggle('_lock');
 		headerTablet.classList.toggle('_active');
 		headerBody.classList.toggle('_active');
 	});
 }
 
-
 //dynamic ul-li
 
-const list = ["Powerfull online protection.", "Internet without borders.", "Supercharged VPN.", "No specific time limits."];
-    const listElements = document.getElementById('info__items');
-    listElements.innerHTML = `${list.map(element => `<li class="info__item">${element}</li>`).join('')}`;
-    
-    
+const list = [
+	'Powerfull online protection.',
+	'Internet without borders.',
+	'Supercharged VPN.',
+	'No specific time limits.',
+];
+const listElements = document.getElementById('info__items');
+listElements.innerHTML = `${list
+	.map((element) => `<li class="info__item">${element}</li>`)
+	.join('')}`;
+
 //footer accordion menu
 
 const spollersArray = document.querySelectorAll('[data-spollers]');
 if (spollersArray.length > 0) {
 	//  * regular spollers *
-	const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
-		return !item.dataset.spollers.split(",")[0];
+	const spollersRegular = Array.from(spollersArray).filter(function (
+		item,
+		index,
+		self
+	) {
+		return !item.dataset.spollers.split(',')[0];
 	});
 	// * initialization of regular spollers *
 	if (spollersRegular.length > 0) {
@@ -81,34 +89,47 @@ if (spollersArray.length > 0) {
 	}
 
 	// * getting spollers with mediaQuaries *
-	const spollersMedia = Array.from(spollersArray).filter(function (item, index, self) {
-		return item.dataset.spollers.split(",")[0];
+	const spollersMedia = Array.from(spollersArray).filter(function (
+		item,
+		index,
+		self
+	) {
+		return item.dataset.spollers.split(',')[0];
 	});
 
 	// * initialization of spollers with mediaQuaries *
 	if (spollersMedia.length > 0) {
 		const breakpointsArray = [];
-		spollersMedia.forEach(item => {
+		spollersMedia.forEach((item) => {
 			const params = item.dataset.spollers;
 			const breakpoint = {};
-			const paramsArray = params.split(",");
+			const paramsArray = params.split(',');
 			breakpoint.value = paramsArray[0];
-			breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
+			breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : 'max';
 			breakpoint.item = item;
 			breakpointsArray.push(breakpoint);
 		});
 
 		// * getting unique breakpoints *
 		let mediaQueries = breakpointsArray.map(function (item) {
-			return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
+			return (
+				'(' +
+				item.type +
+				'-width: ' +
+				item.value +
+				'px),' +
+				item.value +
+				',' +
+				item.type
+			);
 		});
 		mediaQueries = mediaQueries.filter(function (item, index, self) {
 			return self.indexOf(item) === index;
 		});
 
 		// * working with each breakpoint *
-		mediaQueries.forEach(breakpoint => {
-			const paramsArray = breakpoint.split(",");
+		mediaQueries.forEach((breakpoint) => {
+			const paramsArray = breakpoint.split(',');
 			const mediaBreakpoint = paramsArray[1];
 			const mediaType = paramsArray[2];
 			const matchMedia = window.matchMedia(paramsArray[0]);
@@ -128,16 +149,16 @@ if (spollersArray.length > 0) {
 	}
 	// * initialization *
 	function initSpollers(spollersArray, matchMedia = false) {
-		spollersArray.forEach(spollersBlock => {
+		spollersArray.forEach((spollersBlock) => {
 			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
 			if (matchMedia.matches || !matchMedia) {
 				spollersBlock.classList.add('_init');
 				initSpollerBody(spollersBlock);
-				spollersBlock.addEventListener("click", setSpollerAction);
+				spollersBlock.addEventListener('click', setSpollerAction);
 			} else {
 				spollersBlock.classList.remove('_init');
 				initSpollerBody(spollersBlock, false);
-				spollersBlock.removeEventListener("click", setSpollerAction);
+				spollersBlock.removeEventListener('click', setSpollerAction);
 			}
 		});
 	}
@@ -145,7 +166,7 @@ if (spollersArray.length > 0) {
 	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
 		const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
 		if (spollerTitles.length > 0) {
-			spollerTitles.forEach(spollerTitle => {
+			spollerTitles.forEach((spollerTitle) => {
 				if (hideSpollerBody) {
 					spollerTitle.removeAttribute('tabindex');
 					if (!spollerTitle.classList.contains('_active')) {
@@ -161,9 +182,13 @@ if (spollersArray.length > 0) {
 	function setSpollerAction(e) {
 		const el = e.target;
 		if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
-			const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
+			const spollerTitle = el.hasAttribute('data-spoller')
+				? el
+				: el.closest('[data-spoller]');
 			const spollersBlock = spollerTitle.closest('[data-spollers]');
-			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
+			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller')
+				? true
+				: false;
 			if (!spollersBlock.querySelectorAll('._slide').length) {
 				if (oneSpoller && !spollerTitle.classList.contains('_active')) {
 					hideSpollersBody(spollersBlock);
@@ -175,7 +200,9 @@ if (spollersArray.length > 0) {
 		}
 	}
 	function hideSpollersBody(spollersBlock) {
-		const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
+		const spollerActiveTitle = spollersBlock.querySelector(
+			'[data-spoller]._active'
+		);
 		if (spollerActiveTitle) {
 			spollerActiveTitle.classList.remove('_active');
 			_slideUp(spollerActiveTitle.nextElementSibling, 500);
@@ -211,7 +238,7 @@ let _slideUp = (target, duration = 500) => {
 			target.classList.remove('_slide');
 		}, duration);
 	}
-}
+};
 
 /* SLIDE DOWN */
 let _slideDown = (target, duration = 500) => {
@@ -228,7 +255,7 @@ let _slideDown = (target, duration = 500) => {
 		target.style.marginTop = 0;
 		target.style.marginBottom = 0;
 		target.offsetHeight;
-		target.style.transitionProperty = "height, margin, padding";
+		target.style.transitionProperty = 'height, margin, padding';
 		target.style.transitionDuration = duration + 'ms';
 		target.style.height = height + 'px';
 		target.style.removeProperty('padding-top');
@@ -243,7 +270,7 @@ let _slideDown = (target, duration = 500) => {
 			target.classList.remove('_slide');
 		}, duration);
 	}
-}
+};
 /* TOGGLE */
 let _slideToggle = (target, duration = 500) => {
 	if (target.hidden) {
@@ -251,4 +278,4 @@ let _slideToggle = (target, duration = 500) => {
 	} else {
 		return _slideUp(target, duration);
 	}
-}
+};
