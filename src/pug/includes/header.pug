@@ -2,20 +2,17 @@ include mixins.pug
 
 header.header
     a(href="#").header__logo
-        img( src="./img/Logo.svg" alt="logo").header__logo
-    nav.header__body
-        +header__list( [ 
-        {href: '#', text: 'About'},
-        {href: '#', text: 'Features'},
-        {href: '#', text: 'Pricing'},
-        {href: '#', text: 'Testimonials'},
-        {href: '#', text: 'Help'}
-        ] )
-        .header__buttons
-            //- кнопкам задать состояния focus, active, hover, visited и тд
-            a.header__button(href='#')
-                span Sign Ip
-            a.header__button.button-primary(href='#')
-                span Sign Up
+        img( src="./img/Logo.svg" alt="logo").header-logo
+    nav.header-nav
+        a.header-nav__link(href='#') About 
+        a.header-nav__link(href='#') Features
+        a.header-nav__link(href='#') Pricing
+        a.header-nav__link(href='#') Testimonials
+        a.header-nav__link(href='#') Help
+    header-buttons
+        a.header__button(href='#')
+            span Sign Ip
+        a.header__button.button-primary(href='#')
+            span Sign Up
     .header__tablet 
         span
