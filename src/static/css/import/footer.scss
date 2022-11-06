@@ -13,8 +13,9 @@
 		padding-right: 50px;
 	}
 	@include tablet {
-		padding: 20px;
+		padding: 0 20px;
 		padding-top: 40px;
+		max-width: 100%;
 	}
 	&__container {
 		background-color: #f8f8f8;
@@ -27,6 +28,8 @@
 		@include tablet {
 			display: flex;
 			flex-direction: column-reverse;
+			max-width: 100%;
+			background-color: #f8f8f8;
 			margin: 0 auto;
 		}
 	}
@@ -38,6 +41,16 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
+		max-width: 100%;
+
+
+
+		@include tablet {
+
+			.span {
+
+			}
+		}
 	}
 	&__logo {
 		margin-bottom: 20px;
@@ -64,7 +77,7 @@
 		font-size: 16px;
 		line-height: 30px;
 		@include tablet {
-			margin-bottom: 0px;
+			
 		}
 	}
 
@@ -72,7 +85,9 @@
 		display: flex;
 		flex-wrap: nowrap;
 		padding-bottom: 30px;
-		width: 100%;
+
+		@include tablet {
+		}
 	}
 	&__link--social {
 		border-radius: 50%;
@@ -83,6 +98,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 		img {
 			display: block;
 			width: 24px;
@@ -97,6 +113,7 @@
 	}
 	&__copyrights {
 		color: #afb5c0;
+		
 	}
 	&__right {
 		display: flex;
@@ -136,7 +153,6 @@
 				margin-bottom: 0px;
 			}
 		}
-
 	}
 	&__nav-spoller {
 		display: block;
@@ -169,6 +185,5 @@
 			top: 20px;
 			transition: transform 0.3s ease 0s;
 		}
-
 	}
 }
