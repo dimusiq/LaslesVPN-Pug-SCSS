@@ -1,3 +1,9 @@
+mixin header-nav__list ( header__list )
+    ul.header-nav__list
+        each header__link in header__list 
+            li.header__link
+                a(href=header__link.href)=header__link.text
+
 mixin statistic(svg, num, name)
     - var svgName = svg;
     .statistics__item

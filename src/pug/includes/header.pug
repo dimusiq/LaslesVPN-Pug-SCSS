@@ -4,16 +4,18 @@ header.header
     a(href="#").header-logo
         img( src="./img/logo.svg" alt="logo")
     nav.header-nav
-        a.header-nav__link(href='#') About 
-        a.header-nav__link(href='#') Features
-        a.header-nav__link(href='#') Pricing
-        a.header-nav__link(href='#') Testimonials
-        a.header-nav__link(href='#') Help
-
-    .header-buttons
-        a.header__button(href='#')
-            span Sign Ip
-        a.header__button.button-primary(href='#')
-            span Sign Up
+        +header-nav__list( [ 
+                {href: '#', text: 'About'},
+                {href: '#', text: 'Features'},
+                {href: '#', text: 'Pricing'},
+                {href: '#', text: 'Testimonials'},
+                {href: '#', text: 'Help'}
+                ] )
+    .header-btns 
+        .header-buttons
+            a.header__button(href='#')
+                span Sign Ip
+            a.header__button.button-primary(href='#')
+                span Sign Up
     .header__tablet 
         span
