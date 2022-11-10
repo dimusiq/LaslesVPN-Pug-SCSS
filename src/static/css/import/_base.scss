@@ -53,7 +53,6 @@ body {
 	margin: 0 auto;
 
 	@include desktop {
-		padding: 0 50px;
 		margin: 0 auto;
 	}
 	@include tablet {
