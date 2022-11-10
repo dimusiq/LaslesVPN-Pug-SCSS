@@ -49,7 +49,7 @@ const swiper = new Swiper('.swiper', {
 // burger
 
 const headerTablet = document.querySelector('.header__tablet');
-const headerNav = document.querySelector('.header-nav');
+const headerNav = document.querySelector('.header__body');
 
 if (headerTablet) {
 	headerTablet.addEventListener('click', (e) => {

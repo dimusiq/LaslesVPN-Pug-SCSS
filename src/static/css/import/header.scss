@@ -7,6 +7,9 @@
     max-width: 1140px;
     overflow: hidden;
     margin: 0 auto;
+		@include tablet {
+			padding: 0px 50px;
+		}
 
 
     &__tablet {
