@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"stylelint": "stylelint \"**/*.scss\" --fix",
-		"start": "start"
+		"start": "gulp start"
 	},
 	"keywords": [],
 	"author": "Berzeg_07",
