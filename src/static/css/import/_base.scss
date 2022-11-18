@@ -50,6 +50,7 @@ body {
 	margin: 0 auto;
 
 	@include desktop {
+		
 		margin: 0 auto;
 	}
 	@include tablet {
